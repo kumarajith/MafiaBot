@@ -1,0 +1,25 @@
+{
+  "name": "mafia",
+  "version": "1.0.0",
+  "description": "Mafia game",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumarajith/MafiaBot.git"
+  },
+  "keywords": [
+    "mafia"
+  ],
+  "author": "ajith.kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kumarajith/MafiaBot/issues"
+  },
+  "homepage": "https://github.com/kumarajith/MafiaBot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
