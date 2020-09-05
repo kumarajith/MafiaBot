@@ -1,4 +1,6 @@
 const { botId, prefix } = require('../config.json');
+const constants = require('../constants');
+
 module.exports = {
     name: 'setup',
     aliases: ['setup'],
@@ -6,7 +8,7 @@ module.exports = {
     guildOnly: true,
     args: false,
     usage: `${prefix}setup`,
-	execute(message, args) {
+	execute(message, args, client) {
         guild = message.guild;
         guildManager = guild.channels;
         let existingCategory = guildManager.cache.find(channel => channel.name === 'Mafia')
@@ -21,9 +23,9 @@ module.exports = {
                     'topic': 'Where day time discussions take place',
                     'parent': category
                 })
-                guildManager.create('Mafia', {
+                guildManager.create(constants.MAFIA, {
                     'type': 'text',
-                    'topic': 'Mafia kill discussions',
+                    'topic': constants.MAFIA + ' kill discussions',
                     'permissionOverwrites' : [
                         {
                             'id': guild.roles.everyone.id,
@@ -36,7 +38,7 @@ module.exports = {
                     ],
                     'parent': category
                 })
-                guildManager.create('Spy', {
+                guildManager.create(constants.SPY, {
                     'type': 'text',
                     'topic': 'Spy on the mafia!',
                     'permissionOverwrites' : [
@@ -51,9 +53,9 @@ module.exports = {
                     ],
                     'parent': category
                 })
-                guildManager.create('Healer', {
+                guildManager.create(constants.HEALER, {
                     'type': 'text',
-                    'topic': 'Healer decisions',
+                    'topic': constants.HEALER + ' decisions',
                     'permissionOverwrites' : [
                         {
                             'id': guild.roles.everyone.id,
@@ -66,9 +68,9 @@ module.exports = {
                     ],
                     'parent': category
                 })
-                guildManager.create('Detective', {
+                guildManager.create(constants.COP, {
                     'type': 'text',
-                    'topic': 'Detective decisions',
+                    'topic': constants.COP + ' decisions',
                     'permissionOverwrites' : [
                         {
                             'id': guild.roles.everyone.id,
@@ -81,9 +83,9 @@ module.exports = {
                     ],
                     'parent': category
                 })
-                guildManager.create('Silencer', {
+                guildManager.create(constants.SILENCER, {
                     'type': 'text',
-                    'topic': 'Silencer decisions',
+                    'topic': constants.SILENCER + ' decisions',
                     'permissionOverwrites' : [
                         {
                             'id': guild.roles.everyone.id,
