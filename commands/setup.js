@@ -53,6 +53,21 @@ module.exports = {
                     ],
                     'parent': category
                 })
+                guildManager.create(constants.JOKER, {
+                    'type': 'text',
+                    'topic': 'Be random!',
+                    'permissionOverwrites' : [
+                        {
+                            'id': guild.roles.everyone.id,
+                            'deny': ['VIEW_CHANNEL']
+                        },
+                        {
+                            'id': botId,
+                            'allow': ['VIEW_CHANNEL']
+                        }
+                    ],
+                    'parent': category
+                })
                 guildManager.create(constants.HEALER, {
                     'type': 'text',
                     'topic': constants.HEALER + ' decisions',

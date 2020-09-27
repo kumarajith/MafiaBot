@@ -4,5 +4,8 @@ module.exports = Object.freeze({
     HEALER: 'healer',
     SPY: 'spy',
     SILENCER: 'silencer',
-    CIVILIAN: 'civilian'
+    JOKER: 'joker',
+    CIVILIAN: 'civilian',
+    ALIVE: 'alive',
+    DEAD: 'dead'
 });
